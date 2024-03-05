@@ -1,0 +1,74 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day2 CW</title>
+    <style>
+        .App {
+          text-align: center;
+            width: 70%;
+          max-width: 700px;
+          margin: auto;
+           background-color: rgb(219, 214, 214);
+          padding: 10px 20px;
+         border-radius: 20px;
+          margin-top: 40px;
+            font-size: 20px;
+            }
+
+      h1{
+        text-decoration: underline;
+         }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/babel-standalone@6/babel.js"></script>
+    <script type="text/babel">
+  // Define a component 
+   const Heading =() => {
+    return <h1>Learn Web development</h1>
+   }
+
+   const Para1 =() => {
+       return <div>
+       <p>Welcome to the MDN learning area. This set of articles aims to guide complete beginners to web development with all that they need to start coding websites. 
+      </p>
+      </div>
+   };
+   const Para2 =() => { return <div>
+        <p>
+        The aim of this area of MDN is not to take you from "beginner" to "expert" but to take you from "beginner" to "comfortable." From there, you should be able to start making your way, learning from <a href="https://developer.mozilla.org/en-US/docs/Learn">the rest of MDN</a>, and other intermediate to advanced resources that assume a lot of previous knowledge.
+        </p>
+      </div>
+    } ;
+    const Para3 = () => { return    <div>
+        <p>
+        If you are a complete beginner, web development can be challenging — we will hold your hand and provide enough detail for you to feel comfortable and learn the topics properly. You should feel at home whether you are a student learning web development (on your own or as part of a class), a teacher looking for class materials, a hobbyist, or someone who just wants to understand more about how web technologies work.
+        </p>
+      </div>
+    
+}
+  function Greetings() {
+    return <div className="App">
+      <Heading />
+      <Para1 />
+      <Para2 />
+      <Para3 />
+    </div>;
+  }
+ 
+  // Render the component to the DOM
+  ReactDOM.render(
+    <Greetings />,
+    document.getElementById("root")
+  );
+</script>
+
+  </body>
+
+</html>

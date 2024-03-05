@@ -1,0 +1,79 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day2 hw</title>
+    <style>
+        .App {
+          text-align: start;
+            width: 70%;
+          max-width: 700px;
+          margin: auto;
+           background-color: rgb(219, 214, 214);
+          padding: 10px 20px;
+         border-radius: 20px;
+          margin-top: 40px;
+            font-size: 20px;
+            }
+
+      h1{
+        text-decoration: underline;
+         }
+
+      
+
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/babel-standalone@6/babel.js"></script>
+    <script type="text/babel">
+  // Define a component 
+   const Heading =() => {
+    return <h1>Topic covered</h1>
+   }
+
+   const Para1 =() => {
+       return <div>
+        <h4><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web">Getting started with the web</a> </h4>
+       <p>Provides a practical introduction to web development for complete beginners.
+      </p>
+      </div>
+   };
+   const Para2 =() => { return <div>
+    <h4><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">HTML — Structuring the web</a> </h4>
+        <p>
+          HTML is the language that we use to structure the different parts of our content and define what their meaning or purpose is. This topic teaches HTML in detail.
+        </p>
+      </div>
+    } ;
+    const Para3 = () => { return    <div><h4><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">CSS — Styling the web</a> </h4>
+        <p>
+          CSS is the language that we use to control our web content's style and layout, as well as adding behavior like animation. This topic provides comprehensive coverage of CSS.
+        </p>
+      </div>
+    
+}
+  function Greetings() {
+    return <div className="App">
+      <Heading />
+      <Para1 />
+      <Para2 />
+      <Para3 />
+    </div>;
+  }
+ 
+  // Render the component to the DOM
+  ReactDOM.render(
+    <Greetings />,
+    document.getElementById("root")
+  );
+</script>
+
+  </body>
+
+</html>
